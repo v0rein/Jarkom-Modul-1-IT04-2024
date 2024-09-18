@@ -41,6 +41,8 @@ File sama seperti FTP Login.
 
 nc 10.15.42.60 48500
 
+![WhatsApp Image 2024-09-18 at 23 59 06_0ca615d2](https://github.com/user-attachments/assets/2704564d-5176-4eb2-8534-c48fa0638c9d)
+
 
 ### Corporate Breach
 Sebuah perusahaan IT support mendapatkan serangan oleh orang tidak dikenal. Bantulah perusahaan tersebut untuk melacak jejak yang ditinggalkan oleh attacker.
