@@ -65,7 +65,7 @@ nc 10.15.42.60 54000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_83abf77f](https://github.com/user-attachments/assets/eda637a7-beb5-49ec-8674-9acf7237937b)
 
-#### Rizset
+#### Rizzset
 Aku sedang bereksperimen dengan suatu tools, kamu juga bisa menggunakannya untuk menjawab soal ini
 
 nc 10.15.42.60 59500
