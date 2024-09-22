@@ -168,3 +168,13 @@ nc 10.15.42.60 62000
 - tetep pada tcp stream eq 9 tadi, semua jawaban ada dibagian itu
 - lalu ada pertanyaan yang harus di decrypt terlebih dahulu.
 
+### InnerCE
+omg, SIEM mendeteksi adanya serangan hacker yang berhasil mengupload webshell. sebagai analyst yang jago, kamu diharuskan membuat laporan insiden tersebut
+nc 10.15.42.60 56000 
+
+![Screenshot from 2024-09-22 05-50-05](https://github.com/user-attachments/assets/2b40c331-154a-4d00-8cfc-4535a683ad00)
+
+![Screenshot from 2024-09-22 10-33-07](https://github.com/user-attachments/assets/c13a5661-0995-47d3-bc3e-0075d3a36330)
+![Screenshot from 2024-09-22 10-35-10](https://github.com/user-attachments/assets/bbe3f140-42a9-404b-9e7e-429fe5ddc906)
+![Screenshot from 2024-09-22 10-36-56](https://github.com/user-attachments/assets/ba22f68f-be33-446a-a9f7-c6d85394c48d)
+![Screenshot from 2024-09-22 10-41-49](https://github.com/user-attachments/assets/4ecf7870-7709-487f-b56a-e4e37adac1e2)
