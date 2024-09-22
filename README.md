@@ -95,7 +95,6 @@ nc 10.15.42.60 61000
 
 ![Screenshot from 2024-09-18 11-41-19](https://github.com/user-attachments/assets/12aa7e58-411d-47b1-9cdc-bdd1e224059f)
 
-
 ![Screenshot from 2024-09-18 11-41-44](https://github.com/user-attachments/assets/f8ebf7d3-f732-4b80-ae1f-ad4319beba0d)
 
 ![Screenshot from 2024-09-18 11-46-11](https://github.com/user-attachments/assets/41cd7081-c8d0-4887-93d6-bbca89ba23c2)
@@ -103,9 +102,15 @@ nc 10.15.42.60 61000
 
 ![Screenshot from 2024-09-18 11-41-59](https://github.com/user-attachments/assets/e22c29d2-fd74-41d2-b742-16e6c66a48ab)
 
-
 ![Screenshot from 2024-09-18 13-46-04](https://github.com/user-attachments/assets/3f79a139-39f6-421b-b4ba-2795a5d3d792)
 
+#### Langkah - langkah 
+- kita filter dengan 'tcp.stream eq 3'
+- lalu masukkan port "6969' sebagai jawaban di pertanyaan
+- lalu kita filter lagi "tcp.stream eq 9" dibagian itu kita follow dan menemukan beberapa jawaban untuk pertanyaan selanjutnya
+- untuk pertnyaan terakhir mengenai passworde, awalnya di decrypt dulu trus baru di submit
+
+  
 ### Gajah Terbang < Attacker Recon >
 Setelah berhasil menginvestigasi server yang berjalan, kamu diharuskan untuk mencari identitas dan mencari jejak apa saja yang telah dilakukan oleh penyerang! Kamu jago, pasti bisa let’s go temukan tersangkanya!!!
 File sama seperti Gajah Terbang.
@@ -114,4 +119,7 @@ nc 10.15.42.60 62000
 
 ![Screenshot from 2024-09-18 13-41-58](https://github.com/user-attachments/assets/5451bccc-d412-4362-9e1d-91305aeead32)
 
+#### Langkah - Langkah
+- tetep pada tcp stream eq 9 tadi, semua jawaban ada dibagian itu
+- lalu ada pertanyaan yang harus di decrypt terlebih dahulu.
 
