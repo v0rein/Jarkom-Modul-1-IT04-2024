@@ -8,6 +8,11 @@
 ### Advance Sanity Check
 Yang sederhana dulu aja.
 
+Step pengerjaan :
+1. display filter ``` frame contains "username" ```
+2. display filter ``` frame containts “.txt” ```
+3. Open Clue3.txt, ada clue untuk membuka file ppt peraturan praktikum
+4. Decode penword yang ada di ppt praktikum dari base64
 nc 10.15.42.60 44000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_948fb8f2](https://github.com/user-attachments/assets/36387602-bc36-4a48-8144-1161248476f4)
@@ -15,6 +20,10 @@ nc 10.15.42.60 44000
 ### Illegal Breakthrough
 Seorang full-stack developer bernama kevin sedang membuat sebuah web yang memiliki login page. Tetapi karena ia hanya digaji rendah, ia lupa untuk mengamankan web yang ia buat. Bantulah kevin untuk tracing dari jejak yang ditinggalkan oleh attacker.
 
+Step pengerjaan :
+1. Open TCP paling atas untuk melihat port.dst
+2. display filter ``` frame contains "username" ``` >> Follow
+3. display filter ``` http && ip.src eq 172.21.88.207 ``` >> Follow yang ada info FOUND
 nc 10.15.42.60 46000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_f95ea7a3](https://github.com/user-attachments/assets/d2db0705-559b-45de-bed8-436249ee52b5)
@@ -23,6 +32,10 @@ nc 10.15.42.60 46000
 Setelah membantu kevin untuk tracing attacker, sekarang bantu lagi kevin untuk mencari apa yang dilakukan oleh attacker.
 File sama seperti Illegal Breakthrough.
 
+Step Pengerjaan :
+1. ip.src http
+2. display filter ``` http && ip.src eq 172.21.88.207 ``` >> Follow stream yang FOUND lalu lihat displayed
+3. Follow stream di display filter yang sama di info bagian 200 OK
 nc 10.15.42.60 47000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_3e104ed3](https://github.com/user-attachments/assets/28e4b28b-181f-4e30-87c5-8c7ce94acf3a)
@@ -30,6 +43,9 @@ nc 10.15.42.60 47000
 ### FTP LOGIN
 Seseorang menemukan sebuah celah dalam sebuah server. Ia mencoba untuk melakukan brute force login dan ia berhasil masuk. Lakukan pemeriksaan untuk melihat apa yang dilakukan oleh orang tersebut!
 
+Step pengerjaan :
+1. display filter ``` ftp ```
+2. Follow stream di bagian Login Successful
 nc 10.15.42.60 49000
 
 ![WhatsApp Image 2024-09-18 at 22 43 59_d6c4f5d4](https://github.com/user-attachments/assets/df00d0b6-a077-400a-b7a1-8939bccdba5f)
@@ -39,6 +55,10 @@ Easy nevarrawr
 Setelah mengetahui apa yang diketahui pada challenge sebelumnya, sekarang lakukan analisis untuk mengetahui apa yang sebenarnya terjadi.
 File sama seperti FTP Login.
 
+Step pengerjaan :
+1. display filter ``` frame contains "Login" ```
+2. Follow stream di bagian Login successful
+3. Naikkan 1 stream menjadi stream 5 untuk melihat isi g0tcha.cpp dan mengcompile code tersebut
 nc 10.15.42.60 48500
 
 ![WhatsApp Image 2024-09-18 at 23 59 06_0ca615d2](https://github.com/user-attachments/assets/2704564d-5176-4eb2-8534-c48fa0638c9d)
@@ -47,6 +67,9 @@ nc 10.15.42.60 48500
 ### Corporate Breach
 Sebuah perusahaan IT support mendapatkan serangan oleh orang tidak dikenal. Bantulah perusahaan tersebut untuk melacak jejak yang ditinggalkan oleh attacker.
 
+Step pengerjaan :
+1. Follow packet teratas
+2. dislay filter ``` frame contains "email" ```
 nc 10.15.42.60 51000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_35d2499f](https://github.com/user-attachments/assets/d91bc4a8-1399-4d14-b3bd-e067c4bc43ca)
@@ -54,6 +77,9 @@ nc 10.15.42.60 51000
 ### Pegawai Negeri Sebelah
 Kamu seorang data analisis diminta untuk memastikan ulang data-data dari beberapa pegawai
 
+Step pengerjaan :
+1. display filter ``` frame contains "nNnM%coQuF" ```
+2. Follow stream lalu gunakan shortcut ``` CTRL+F ``` untuk mencari jawaban
 nc 10.15.42.60 53000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_8da370bc](https://github.com/user-attachments/assets/2c26ede1-a555-4c49-94ab-06aaaa943449)
@@ -61,6 +87,9 @@ nc 10.15.42.60 53000
 ### EZ
 Aku sedang mencoba bikin chat service tapi kayanya pesannya bisa di sniffing deh? coba temukan pesannya.
 
+Step pengerjaan :
+1. Follow stream packet TCP paling atas
+2. Open packet TCP paling atas untuk melihat ip.dst
 nc 10.15.42.60 54000
 
 ![WhatsApp Image 2024-09-18 at 22 44 01_83abf77f](https://github.com/user-attachments/assets/eda637a7-beb5-49ec-8674-9acf7237937b)
@@ -68,6 +97,9 @@ nc 10.15.42.60 54000
 #### Rizzset
 Aku sedang bereksperimen dengan suatu tools, kamu juga bisa menggunakannya untuk menjawab soal ini
 
+Step pengerjaan :
+1. display filter ``` frame contains www ```
+2. Masukkan domain www.its.ac.id ke tools JARM
 nc 10.15.42.60 59500
 
 ![WhatsApp Image 2024-09-18 at 22 44 03_cc8544f4](https://github.com/user-attachments/assets/f6e33805-2da6-46c0-bbb5-fe1ca853c4bd)
@@ -76,6 +108,14 @@ nc 10.15.42.60 59500
 Ternyata sang attacker dengan sengaja meninggalkan sesuatu untuk dibaca oleh kamu. Lihat pesan apa yang ditinggalkan attacker.
 File sama seperti Corporate Breach.
 
+Step pengerjaan :
+1. display filter ``` frame contains "login" ```
+2. display filter ``` http && frame contains "Not Found" ```
+3. Sort berdasarkan time dan kurangkan dengan beberapa packets yang mengambil waktu yang melebihi waktu rata-rata
+4. display filter ``` http.request ``` >> Follow stream ke packet yang memiliki length berbeda dengan packet lain
+5. display filter ``` http.request.method == "POST" ``` >> Lihat displayed
+6. Lihat 5 packet terakhir yang memiliki length yang berbeda >> Follow HTTP stream
+7. Dekripsi menggunakan ASCII decoder
 nc 10.15.42.60 52000
 
 ![WhatsApp Image 2024-09-18 at 22 44 02_08ad1469](https://github.com/user-attachments/assets/99541780-f751-4fae-9e24-adb0ee2b5788)
@@ -83,6 +123,11 @@ nc 10.15.42.60 52000
 ### 22 Nightmare
 Dicari rusa yang hilang.
 
+Step pengerjaan :
+1. display filter ``` ftp-data.command contains "STOR" ```
+2. Export file Sh1k4.jpg & noko.py
+3. Open file Sh1k4.jpg terdapat hidden message "NUN"
+4. Open file noko.py dan masukkan NUN sebagai key input dan lakukan operasi XOR
 nc 10.15.42.60 45000
 
 ![WhatsApp Image 2024-09-18 at 22 44 03_0b24f451](https://github.com/user-attachments/assets/802b9872-421b-4bed-a6ce-064296aff1a4)
